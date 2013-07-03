@@ -1,0 +1,68 @@
+<class cl="TaskerData" sr="">
+	<class cl="Profile" sr="prof2">
+		<limit>true</limit>
+		<nme>Cell Network A</nme>
+		<id>9999</id>
+		<mid1>4</mid1>
+		<mid0>3</mid0>
+		<class cl="StateContext" sr="con0">
+			<class cl="StringArg" sr="a0">
+				<val>Scan for cell towers.</val>
+			</class>
+			<code>7</code>
+		</class>
+		<class cl="StateContext" sr="con1">
+			<pin>true</pin>
+			<code>100</code>
+		</class>
+	</class>
+	<class cl="Task" sr="task3">
+		<id>3</id>
+		<class cl="Action" sr="act1">
+			<code>548</code>
+			<class cl="IntArg" sr="arg1">
+			</class>
+			<class cl="StringArg" sr="arg0">
+				<val>Entered home cell net.</val>
+			</class>
+		</class>
+		<pri>10</pri>
+		<class cl="Action" sr="act0">
+			<class cl="IntArg" sr="arg3">
+			</class>
+			<class cl="IntArg" sr="arg2">
+			</class>
+			<code>547</code>
+			<class cl="StringArg" sr="arg1">
+				<val>1</val>
+			</class>
+			<class cl="StringArg" sr="arg0">
+				<val>%CELLA</val>
+			</class>
+		</class>
+	</class>
+	<class cl="Task" sr="task4">
+		<id>4</id>
+		<class cl="Action" sr="act1">
+			<class cl="IntArg" sr="arg1">
+			</class>
+			<op>2</op>
+			<class cl="StringArg" sr="arg0">
+				<val>Leaving home cell net.</val>
+			</class>
+			<rhs>1</rhs>
+			<code>548</code>
+			<lhs>%WIFIC</lhs>
+		</class>
+		<class cl="Action" sr="act0">
+			<rhs>1</rhs>
+			<code>549</code>
+			<op>2</op>
+			<class cl="StringArg" sr="arg0">
+				<val>%CELLA</val>
+			</class>
+			<lhs>%WIFIC</lhs>
+		</class>
+	</class>
+	<tv>1.0.17</tv>
+</class>

@@ -1,0 +1,80 @@
+<class cl="TaskerData" sr="">
+	<class cl="Task" sr="task23">
+		<id>23</id>
+		<class cl="Action" sr="act1">
+			<code>548</code>
+			<class cl="IntArg" sr="arg1">
+			</class>
+			<class cl="StringArg" sr="arg0">
+				<val>Wifi in range.</val>
+			</class>
+		</class>
+		<class cl="Action" sr="act0">
+			<class cl="IntArg" sr="arg0">
+				<val>1</val>
+			</class>
+			<code>425</code>
+		</class>
+	</class>
+	<class cl="Task" sr="task9">
+		<id>9</id>
+		<class cl="Action" sr="act1">
+			<class cl="IntArg" sr="arg1">
+			</class>
+			<op>2</op>
+			<class cl="StringArg" sr="arg0">
+				<val>Wifi out of range.</val>
+			</class>
+			<rhs>1</rhs>
+			<code>548</code>
+			<lhs>%WIFIC</lhs>
+		</class>
+		<class cl="Action" sr="act0">
+			<rhs>1</rhs>
+			<code>425</code>
+			<op>2</op>
+			<class cl="IntArg" sr="arg0">
+			</class>
+			<lhs>%WIFIC</lhs>
+		</class>
+	</class>
+	<class cl="Profile" sr="prof22">
+		<limit>true</limit>
+		<nme>Wifi Near A</nme>
+		<id>9999</id>
+		<mid1>9</mid1>
+		<mid0>23</mid0>
+		<class cl="StateContext" sr="con0">
+			<class cl="IntArg" sr="a1">
+				<val>1</val>
+			</class>
+			<class cl="StringArg" sr="a2">
+				<val>1</val>
+			</class>
+			<code>165</code>
+			<class cl="StringArg" sr="a0">
+				<val>%CELLA</val>
+			</class>
+		</class>
+		<class cl="StateContext" sr="con1">
+			<class cl="StringArg" sr="a0">
+				<val>HOMESSID</val>
+			</class>
+			<class cl="StringArg" sr="a1">
+				<val>11:11:11:11:11:11</val>
+			</class>
+			<class cl="StringArg" sr="a2">
+				<val></val>
+			</class>
+			<class cl="IntArg" sr="a3">
+			</class>
+			<class cl="IntArg" sr="a4">
+			</class>
+			<code>170</code>
+			<class cl="IntArg" sr="a5">
+				<val>1</val>
+			</class>
+		</class>
+	</class>
+	<tv>1.0.17</tv>
+</class>

@@ -1,0 +1,210 @@
+<class cl="TaskerData" sr="">
+	<class cl="Profile" sr="prof27">
+		<nme>Wifi Connected</nme>
+		<id>9999</id>
+		<pri>9</pri>
+		<mid1>29</mid1>
+		<mid0>28</mid0>
+		<class cl="StateContext" sr="con0">
+			<class cl="StringArg" sr="a1">
+				<val></val>
+			</class>
+			<class cl="StringArg" sr="a2">
+				<val></val>
+			</class>
+			<code>160</code>
+			<class cl="StringArg" sr="a0">
+				<val></val>
+			</class>
+		</class>
+	</class>
+	<class cl="Task" sr="task29">
+		<class cl="Action" sr="act1">
+			<code>548</code>
+			<class cl="IntArg" sr="arg1">
+			</class>
+			<class cl="StringArg" sr="arg0">
+				<val>Wifi disconnected.</val>
+			</class>
+		</class>
+		<class cl="Action" sr="act0">
+			<class cl="IntArg" sr="arg3">
+			</class>
+			<class cl="IntArg" sr="arg2">
+			</class>
+			<code>547</code>
+			<class cl="StringArg" sr="arg1">
+				<val>0</val>
+			</class>
+			<class cl="StringArg" sr="arg0">
+				<val>%WIFIC</val>
+			</class>
+		</class>
+		<class cl="Action" sr="act10">
+			<code>159</code>
+			<class cl="IntArg" sr="arg1">
+				<val>1</val>
+			</class>
+			<class cl="StringArg" sr="arg0">
+				<val>Cell Network B</val>
+			</class>
+		</class>
+		<id>29</id>
+		<class cl="Action" sr="act8">
+			<code>159</code>
+			<class cl="IntArg" sr="arg1">
+				<val>1</val>
+			</class>
+			<class cl="StringArg" sr="arg0">
+				<val>Cell Network A</val>
+			</class>
+		</class>
+		<class cl="Action" sr="act9">
+			<code>159</code>
+			<class cl="IntArg" sr="arg1">
+				<val>1</val>
+			</class>
+			<class cl="StringArg" sr="arg0">
+				<val>Wifi Near B</val>
+			</class>
+		</class>
+		<class cl="Action" sr="act6">
+			<class cl="IntArg" sr="arg4">
+			</class>
+			<class cl="IntArg" sr="arg3">
+			</class>
+			<class cl="IntArg" sr="arg2">
+			</class>
+			<class cl="IntArg" sr="arg1">
+				<val>3</val>
+			</class>
+			<class cl="IntArg" sr="arg0">
+			</class>
+			<code>30</code>
+		</class>
+		<class cl="Action" sr="act7">
+			<code>159</code>
+			<class cl="IntArg" sr="arg1">
+				<val>1</val>
+			</class>
+			<class cl="StringArg" sr="arg0">
+				<val>Wifi Near A</val>
+			</class>
+		</class>
+		<class cl="Action" sr="act4">
+			<code>548</code>
+			<class cl="IntArg" sr="arg1">
+			</class>
+			<class cl="StringArg" sr="arg0">
+				<val>Disabling wifi.</val>
+			</class>
+		</class>
+		<class cl="Action" sr="act5">
+			<class cl="IntArg" sr="arg0">
+			</class>
+			<code>425</code>
+		</class>
+		<class cl="Action" sr="act2">
+			<class cl="IntArg" sr="arg4">
+			</class>
+			<class cl="IntArg" sr="arg3">
+			</class>
+			<class cl="IntArg" sr="arg2">
+			</class>
+			<class cl="IntArg" sr="arg1">
+				<val>30</val>
+			</class>
+			<class cl="IntArg" sr="arg0">
+			</class>
+			<code>30</code>
+		</class>
+		<class cl="Action" sr="act3">
+			<rhs>1</rhs>
+			<code>137</code>
+			<op>1</op>
+			<class cl="IntArg" sr="arg0">
+			</class>
+			<lhs>%WIFIC</lhs>
+		</class>
+	</class>
+	<class cl="Task" sr="task28">
+		<id>28</id>
+		<class cl="Action" sr="act1">
+			<class cl="IntArg" sr="arg4">
+			</class>
+			<class cl="IntArg" sr="arg3">
+			</class>
+			<class cl="IntArg" sr="arg2">
+			</class>
+			<class cl="IntArg" sr="arg1">
+				<val>15</val>
+			</class>
+			<class cl="IntArg" sr="arg0">
+			</class>
+			<code>30</code>
+		</class>
+		<pri>10</pri>
+		<class cl="Action" sr="act0">
+			<class cl="IntArg" sr="arg3">
+			</class>
+			<class cl="IntArg" sr="arg2">
+			</class>
+			<code>547</code>
+			<class cl="StringArg" sr="arg1">
+				<val>1</val>
+			</class>
+			<class cl="StringArg" sr="arg0">
+				<val>%WIFIC</val>
+			</class>
+		</class>
+		<class cl="Action" sr="act6">
+			<code>159</code>
+			<class cl="IntArg" sr="arg1">
+			</class>
+			<class cl="StringArg" sr="arg0">
+				<val>Wifi Near B</val>
+			</class>
+		</class>
+		<class cl="Action" sr="act7">
+			<code>159</code>
+			<class cl="IntArg" sr="arg1">
+			</class>
+			<class cl="StringArg" sr="arg0">
+				<val>Cell Network B</val>
+			</class>
+		</class>
+		<class cl="Action" sr="act4">
+			<code>159</code>
+			<class cl="IntArg" sr="arg1">
+			</class>
+			<class cl="StringArg" sr="arg0">
+				<val>Wifi Near A</val>
+			</class>
+		</class>
+		<class cl="Action" sr="act5">
+			<code>159</code>
+			<class cl="IntArg" sr="arg1">
+			</class>
+			<class cl="StringArg" sr="arg0">
+				<val>Cell Network A</val>
+			</class>
+		</class>
+		<class cl="Action" sr="act2">
+			<rhs>1</rhs>
+			<code>137</code>
+			<op>2</op>
+			<class cl="IntArg" sr="arg0">
+			</class>
+			<lhs>%WIFIC</lhs>
+		</class>
+		<class cl="Action" sr="act3">
+			<code>548</code>
+			<class cl="IntArg" sr="arg1">
+			</class>
+			<class cl="StringArg" sr="arg0">
+				<val>Connected to wifi.</val>
+			</class>
+		</class>
+	</class>
+	<tv>1.0.17</tv>
+</class>

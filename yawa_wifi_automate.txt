@@ -1,0 +1,85 @@
+http://tasker.wikidot.com/yanawa
+
+
+This is Yet Another Wifi Automater using minimal battery use. It is similar to:
+http://tasker.wikidot.com/low-battery-usage-wifi-enableing-profile-using-wifi-near
+
+However with some key differences:
+1. By default it comes with support for two access points (e.g home and work). Easily modified for a different number (e.g. 1, 3, 4 access points)
+2. It disables cell tower and "wifi near" scanning when connected, as these contexts aren't needed when already connected.
+3. If the cell tower goes out of range or drops signal, Wifi remains connected and isn't affected.
+
+Point 2 is particularly important. Tasker lists the below feature under "future plans" (http://tasker.dinglisch.net/todo.html):
+"wifi near: if connnected to an AP and all wifi near states match it's details, stop scanning"
+
+This suggests that even if connected, Tasker will continue to scan for wifi networks if a "Wifi near" context is active. These set of profiles will disable both cell tower and wifi near profiles if and when connected to wifi to further reduce battery usage.
+
+Cell Network A Profile
+Cell Network B Profile
+Wifi Connected Profile
+Wifi Near A Profile
+Wifi Near B Profile
+
+Import each of the above profiles and modify the "Cell Network" and "Wifi Near" profiles to your appropriate cell towers and Wifi APs.
+
+If you only need the one access point - you can delete the "B" set of profiles and delete any references to them in the "Wifi Connected" profile. If you need more access points, just copy the profiles from A or B and edit as appropriate.
+
+These set of profiles use some more advanced techniques than the "step through" version. When connected, only the "Wifi connected" profile is active, and all others are disabled. Exit tasks are required on the "wifi near" profiles to avoid Tasker turning off wifi when those profiles are disabled.
+
+Tested on Tasker 1.0.17
+
+Home WiFi
+---------
+
+Profile: Wifi Connected (8)
+Priority: 9 CoolDown: 0
+State: Wifi Connected [ SSID:Querqueboy MAC:00:26:b8:eb:e9:10 IP:* ]
+Enter: Anon (6)
+A1: Variable Set [ Name:%WIFIC To:1 Do Maths:Off Append:Off ]
+A2: Wait [ MS:0 Seconds:15 Minutes:0 Hours:0 Days:0 ]
+A3: Stop [ With Error:Off Task: ] If [ %WIFIC !~ 1 ]
+A4: Flash [ Text:Connected to wifi. Long:Off ]
+A5: Profile Status [ Name:Wifi Near A Set:Off ]
+A6: Profile Status [ Name:Cell Network A Set:Off ]
+
+Exit: Anon (7)
+A1: Variable Set [ Name:%WIFIC To:0 Do Maths:Off Append:Off ]
+A2: Flash [ Text:Wifi disconnected. Long:Off ]
+A3: Wait [ MS:0 Seconds:30 Minutes:0 Hours:0 Days:0 ]
+A4: Stop [ With Error:Off Task: ] If [ %WIFIC ~ 1 ]
+A5: Flash [ Text:Disabling wifi. Long:Off ]
+A6: WiFi [ Set:Off ]
+A7: Wait [ MS:0 Seconds:3 Minutes:0 Hours:0 Days:0 ]
+A8: Profile Status [ Name:Wifi Near A Set:On ]
+A9: Profile Status [ Name:Cell Network A Set:On ] 
+-------------------------------------------------------------------------
+
+Profile: Cell Network A (5)
+State: Cell Near [ Cell Tower / Last Signal:Scan for cell towers. / 0
+CDMA:6874 Ignore Cells:* ]
+State: Not Airplane Mode
+Enter: Anon (3)
+A1: Variable Set [ Name:%CELLA To:1 Do Maths:Off Append:Off ]
+A2: Flash [ Text:Entered home cell net. Long:Off ]
+
+Exit: Anon (4)
+A1: Variable Clear [ Name:%CELLA Pattern Matching:Off ] If [ %WIFIC !~ 1 ]
+A2: Flash [ Text:Leaving home cell net. Long:Off ] If [ %WIFIC !~ 1 ]
+--------------------------------------------------------------------------
+
+Profile: Wifi Near A (11)
+State: Variable Value [ Name:%CELLA Op:Matches Value:1 ]
+State: Wifi Near [ SSID:Querqueboy MAC:00:26:b8:eb:e9:10 Capabilities:* Min. Activate Signal Level:0 Channel:0 Toggle Wifi:On ]
+Enter: Anon (9)
+A1: WiFi [ Set:On ]
+A2: Flash [ Text:Wifi in range. Long:Off ]
+
+Exit: Anon (10)
+A1: WiFi [ Set:Off ] If [ %WIFIC !~ 1 ]
+A2: Flash [ Text:Wifi out of range. Long:Off ] If [ %WIFIC !~ 1 ]
+
+
+
+https://groups.google.com/forum/#!msg/tasker/ugC9MD0UpbU/rrRD5Q6WIZoJ
+
+
